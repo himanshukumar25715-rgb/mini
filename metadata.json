@@ -1,0 +1,8 @@
+{
+  "name": "VitalSync - Smart Health Companion",
+  "description": "A comprehensive AI-powered health tracking application featuring nutrition scanning, mood analysis, and personalized health insights.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
