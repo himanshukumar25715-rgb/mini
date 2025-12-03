@@ -7,10 +7,8 @@ import { FoodAnalysis } from '../types';
 const USE_BACKEND = false; 
 const BACKEND_URL = 'http://localhost:5000/api';
 
-// API Key provided by user
-// Prefer environment variable set via Vite (.env.local) or define in `vite.config.ts`.
-declare const process: any;
-const apiKey: string = (typeof process !== 'undefined' && (process.env?.GEMINI_API_KEY || process.env?.API_KEY)) || '';
+// API Key - Hardcoded for production
+const apiKey: string = 'AIzaSyDZ_nEdAC9E2wMC67kAoyI43gYhvjWEJKc';
 
 // Client-side SDK instance
 const ai = new GoogleGenAI({ apiKey: apiKey });
