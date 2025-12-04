@@ -7,8 +7,9 @@ import { FoodAnalysis } from '../types';
 const USE_BACKEND = false; 
 const BACKEND_URL = 'http://localhost:5000/api';
 
-// API Key - Hardcoded for production
-const apiKey: string = 'AIzaSyDZ_nEdAC9E2wMC67kAoyI43gYhvjWEJKc';
+// API Key provided by environment variable (do NOT hardcode secrets)
+declare const process: any;
+const apiKey: string = (typeof process !== 'undefined' && (process.env?.GEMINI_API_KEY || process.env?.API_KEY)) || '';
 
 // Client-side SDK instance
 const ai = new GoogleGenAI({ apiKey: apiKey });
