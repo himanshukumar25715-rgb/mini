@@ -9,8 +9,7 @@ const BACKEND_URL = 'http://localhost:5000/api';
 
 // API Key provided by environment variable (do NOT hardcode secrets)
 declare const process: any;
-const apiKey: string = (typeof process !== 'undefined' && (process.env?.GEMINI_API_KEY || process.env?.API_KEY)) || '';
-
+const apiKey: string = import.meta.env.VITE_GEMINI_API_KEY || '';
 // Client-side SDK instance
 const ai = new GoogleGenAI({ apiKey: apiKey });
 
